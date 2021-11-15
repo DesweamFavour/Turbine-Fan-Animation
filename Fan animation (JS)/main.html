@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>TURBINE ANIMATION</title>
+        <link href="FAN%20BLADES.png" rel="icon" type="text/icon">
+
+        <style>
+            #div {
+                margin: 1rem auto;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-end;
+                width: 50%;
+                font-family: calibri;
+            }
+
+            #imgdiv {
+                width: 100%;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                box-sizing: border-box;
+                justify-content: space-between;
+            }
+
+            img {
+                width: 100%;
+                box-sizing: border-box;
+                transition: all 5s;
+                /* animation-name: fan; */
+                /* animation-duration: 3s; */
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes fan {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(720deg);
+                }
+
+            }
+
+            .fan-speed{
+                width: 50%;
+                background: #f1f1f1;
+                padding: 0.5rem;
+                display: flex;
+                border-radius: 2rem;
+                list-style-type: none;
+                color: #7c7c7c;
+            }
+
+            .fan-speed label{
+                width: 20%;
+            }
+            button{
+                padding: 1rem;
+                font-size: 24px;
+                border: 1px solid #000000;
+                border-radius: 0.5rem;
+            }
+            button:hover{
+                border: 1px solid #000000;
+                background: #000000;
+                color: #ffffff;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="div">
+            <button id="on" onclick="On()">On</button>
+
+            <div id="imgdiv">
+                <img src="FAN BLADES.png" id="img">
+
+                <p>SELECT TURBINE SPEED</p>
+                <ul class="fan-speed">
+                    <label for="one"><input onclick="turbineSpeed('2.5')" type="radio" id="one" name="fanSp"/>1</label>
+                    <label for="two"><input onclick="turbineSpeed('2')" type="radio" id="two" name="fanSp">2</label>
+                    <label for="three"><input onclick="turbineSpeed('1.5')" type="radio" id="three" name="fanSp">3</label>
+                    <label for="four"><input onclick="turbineSpeed('1')" type="radio" id="four" name="fanSp">4</label>
+                    <label for="five"><input onclick="turbineSpeed('0.5')" type="radio" id="five" name="fanSp">5</label>
+                </ul>
+            </div>
+
+            <button id="off" onclick="Off()">Off</button>
+        </div>
+
+
+
+
+
+
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
