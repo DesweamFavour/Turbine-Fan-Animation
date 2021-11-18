@@ -11,6 +11,7 @@ function turbineSpeed(x) {
 function On() {
     img.style.animationName = `fan`;
     img.style.animationDuration = turbineSpeed(x) + 's';
+    img.style.animationDuration = '3s';
     console.log('Rotating');
     console.log(turbineSpeed(x));
 }
